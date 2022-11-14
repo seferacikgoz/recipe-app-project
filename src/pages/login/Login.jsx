@@ -1,11 +1,15 @@
 import React from 'react'
-import {LoginContainer, FormContainer} from "./Login.style"
+import {LoginContainer, FormContainer, StyledImg, Header} from "./Login.style"
+import meal from "../../assets/meal.svg"
 
-const Login = () => {
+const Login = () => { 
   return (
     <LoginContainer>
       <FormContainer>
-
+        <StyledImg src={meal}/>
+        <Header>
+          {"<CW/>"} Recipe
+        </Header>
 
       </FormContainer>
     </LoginContainer>

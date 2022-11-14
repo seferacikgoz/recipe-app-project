@@ -1,10 +1,13 @@
 import React from 'react'
-import {LoginContainer} from "./Login.style"
+import {LoginContainer, FormContainer} from "./Login.style"
 
 const Login = () => {
   return (
     <LoginContainer>
+      <FormContainer>
 
+
+      </FormContainer>
     </LoginContainer>
   )
 }

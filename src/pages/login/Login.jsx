@@ -7,9 +7,14 @@ const Login = () => {
 
   const navigate = useNavigate();
 
+  const userInfo = {
+    username:"admin"
+  }
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    navigate("/")
+    sessionStorage.setItem("user", JSON.stringify(userInfo))
+    navigate(-1);
   }
 
 

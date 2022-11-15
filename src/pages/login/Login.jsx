@@ -1,5 +1,5 @@
 import React from 'react'
-import {LoginContainer, FormContainer, StyledImg, Header} from "./Login.style"
+import {LoginContainer, FormContainer, StyledImg, Header, StyledInput, StyledForm, StyledButton} from "./Login.style"
 import meal from "../../assets/meal.svg"
 
 const Login = () => { 
@@ -10,7 +10,13 @@ const Login = () => {
         <Header>
           {"<CW/>"} Recipe
         </Header>
-
+        <StyledForm>
+        <StyledInput placeholder='Enter Username' type="text"/>
+        <StyledInput placeholder='Enter Password' type="password"/>
+        <StyledButton>          
+          Login
+          </StyledButton>
+        </StyledForm>        
       </FormContainer>
     </LoginContainer>
   )

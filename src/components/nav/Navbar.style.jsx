@@ -10,6 +10,6 @@ export const Nav= styled(Flex)`
 `;
 
 export const Brand = styled(Link)`
-
+color:${({theme}) => theme.colors.logoColor}
 
 `;

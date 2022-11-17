@@ -1,5 +1,6 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
+import Header from '../../components/header/Header'
 
 const Home = () => {
   const APP_ID = "1d5bc390"
@@ -24,7 +25,7 @@ const Home = () => {
 
   return (
     <div>
-      Home
+      <Header setQuery={setQuery}/>
     </div>
   )
 }

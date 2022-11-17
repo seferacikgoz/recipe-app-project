@@ -21,6 +21,10 @@ span{
 `;
 
 export const Menu = styled(Flex)`
+@media (max-width:${({theme}) => theme.screens.lg}) {
+    flex-direction: column;
+    width: 100%;
+}
 `;
 
 export const MenuLink = styled(Link)`
@@ -34,6 +38,10 @@ transition: all 0.3s ease-in;
     color: ${({theme}) => theme.colors.mainColor};
     font-weight: bold;
 }
+@media (max-width:${({theme}) => theme.screens.lg}) {
+    width: 100%;
+    border-bottom: 2px solid ${({theme}) => theme.colors.mainColor};;
+}
 `;
 
 
@@ -41,6 +49,10 @@ export const Hamburger = styled.div`
 /* display: none; */
 cursor: pointer;
 color: ${({theme}) => theme.colors.maniColor};
+
+@media (max-width:${({theme}) => theme.screens.lg}) {
+    display: block;
+}
 `;
 
 

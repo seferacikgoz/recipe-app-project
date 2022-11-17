@@ -36,4 +36,12 @@ transition: all 0.3s ease-in;
 }
 `;
 
+
+export const Hamburger = styled.div`
+/* display: none; */
+cursor: pointer;
+color: ${({theme}) => theme.colors.maniColor};
+`;
+
+
 export default Nav;

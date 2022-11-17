@@ -1,7 +1,8 @@
 import React from 'react'
 import {Link} from "react-router-dom"
 import "./Navbar.style"
-import  Nav,{Brand, Menu, MenuLink } from './Navbar.style'
+import  Nav,{Brand, Menu, MenuLink, Hamburger } from './Navbar.style'
+import {GiHamburgerMenu} from "react-icons/gi"
 
 
 
@@ -13,6 +14,10 @@ const Navbar = () => {
       <i>{"<Clarusway/>"}</i>
     <span>Recipe</span>
     </Brand>
+
+    <Hamburger>
+      <GiHamburgerMenu/>
+    </Hamburger>
   
     <Menu>
       <MenuLink to="/">Home</MenuLink>

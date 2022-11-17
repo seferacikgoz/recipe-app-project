@@ -2,7 +2,7 @@ import React from 'react'
 import "./Header.style"
 import { Button, FoodInput, FormContainer, HeaderContainer, MainHeader, Select } from './Header.style'
 
-const Header = ({setQuery}) => {
+const Header = ({setQuery, setSelectedMeal, mealType, getData}) => {
   return (
    <HeaderContainer>
     <MainHeader>
@@ -16,8 +16,20 @@ const Header = ({setQuery}) => {
 
       <Button type='submit'>SEARCH</Button>
 
-      <Select name="mealType" id='mealType'>
+      <Select name="mealType" id='mealType' onChange={(e) => setSelectedMeal(e.target.value)}>
 
+        {mealType.map((meal,index) =>{
+          return(
+            <option key={index} value={meal}>
+              {meal}
+          </option>
+          )
+
+        }
+          
+        )}
+
+      <option value=""></option>
       </Select>
     </FormContainer>
    </HeaderContainer>

@@ -1,11 +1,10 @@
 import React from 'react'
-import { DetailContainer, HeaderContainer, OtherPart, DetailPart } from './Detail.style'
+import { DetailContainer, HeaderContainer, OtherPart, DetailPart, ImgContainer, IngContainer } from './Detail.style'
 import {useLocation} from "react-router-dom"
 import diet from "../../assets/diet.svg"
 
 const Detail = () => {
-  const {state} = useLocation();
-  console.log("state geldi mi:", state)
+  const {state} = useLocation("");
   return (
     <DetailContainer>
       <HeaderContainer>
@@ -46,6 +45,18 @@ const Detail = () => {
           ))}
 
       </OtherPart>
+
+      <ImgContainer>
+      <img src={state.image}/>
+      </ImgContainer>
+
+      <IngContainer>
+        {state.ingredientLines.map((ingredient, index)=> (
+          <div>
+            <p>{index+1}-{ingredient}</p>
+          </div>
+        ))}
+      </IngContainer>
       </DetailPart>
     </DetailContainer>
   )

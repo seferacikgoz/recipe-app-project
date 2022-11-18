@@ -1,10 +1,19 @@
 import React from 'react'
+import {MainContainer, Card, Header} from "./Cards.style"
 
-const Cards = () => {
+const Cards = ({recipes}) => {
   return (
-    <div>
-      Cards
-    </div>
+    <MainContainer wrap="wrap">
+      {recipes.map(({recipe},index) => {
+        return(
+          <Card key={index}>
+            <Header>
+              {recipe.label}
+            </Header>
+          </Card>
+        )
+      })}
+    </MainContainer>
   )
 }
 

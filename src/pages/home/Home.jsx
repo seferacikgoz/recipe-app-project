@@ -48,9 +48,6 @@ const Home = () => {
 
       {recipes?.length===0 && <HeaderText>The Food can not be found</HeaderText>}
       {recipes?.length>0 && <Cards recipes={recipes}/>}
-
-
-      <Cards/>
     </div>
   )
 }

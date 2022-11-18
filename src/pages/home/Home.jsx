@@ -1,6 +1,7 @@
 import axios from 'axios'
 import React, {useState } from 'react'
 import Header from '../../components/header/Header'
+import Cards from "../../components/cards/Cards"
 
 const Home = () => {
   const APP_ID = "1d5bc390"
@@ -13,11 +14,18 @@ const Home = () => {
   const url = `https://api.edamam.com/search?q=${query}&app_id=${APP_ID}&app_key=${APP_KEY}&mealType=${selectedMeal}`;
 
   const getData = async () => {
-    const {data} = await axios(url)
-    
-    setRecipes(data.hits)
-    console.log(recipes)
-  }
+    if (query){
+      try {
+        const {data} = await axios(url)
+        setRecipes(data.hits)
+      } catch (error) {
+        console.log(error)        
+      }     
+    }else{
+        alert("Fill the Form")
+      }    
+    }
+  console.log(recipes)
 
 /*   useEffect(() => {
     getData()
@@ -26,7 +34,15 @@ const Home = () => {
 
   return (
     <div>
-      <Header setQuery={setQuery} setSelectedMeal={setSelectedMeal} mealType={mealType} getData={getData}/>
+      <Header setQuery={setQuery} 
+      setSelectedMeal={setSelectedMeal} 
+      mealType={mealType} 
+      getData={getData}/>
+
+      {!recipes && }
+
+
+      <Cards/>
     </div>
   )
 }

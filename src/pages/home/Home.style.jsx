@@ -13,6 +13,6 @@ export const HomeImg = styled.img`
 
 export const HeaderText = styled.h1`
   font-size: 2.5rem;
-  color: red;
+  color: #a93434;
   text-align: center;
 `;
